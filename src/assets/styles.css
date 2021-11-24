@@ -1,0 +1,90 @@
+html, body {
+  margin: 20px;
+  padding: 0px;
+}
+.container {
+   width: 100%;
+   margin: auto;
+}
+.fullname {
+   position: relative;
+   margin: 40px 3%;
+}
+.fullname input[type='text']{
+   font: 15px/24px sans-seirf;
+   box-sizing: border-box;
+   padding: 0.3em;
+   padding-left: 5px;
+   letter-spacing: 1px;
+   width: 20em;
+}
+.message {
+   color: #f35519;
+}
+.s-mess {
+   font-size: 14px;
+   line-height: 10px;
+   color: #727272;
+}
+#app h1 {
+   font-size: 16px;
+   #border-bottom: 1px solid #ddd;
+   #padding: 16px 0;
+   padding: 1rem 2rem;
+   border-top: 3px solid #706868;
+   border-bottom: 3px solid #706868;
+}
+table.oslist {
+   width: 100%;
+   text-align: center;
+   border-collapse: collapse;
+   border-spacing: 0;
+   border: solid 3px #778ca3;
+}
+table.oslist th{
+   padding: 10px;
+   border: solid 1px #778ca3;
+   background:#778ca3;
+   color: #fff;
+}
+
+table.oslist td{
+  padding: 10px;
+  border: solid 1px #778ca3;
+}
+
+table.oslist td a{
+  background-color: #25b327;
+  color: white;
+  padding:5px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+#oslist tbody tr.odd{
+  background-color: #ffffff !important;
+}
+
+#oslist tbody tr.even{
+  background-color: #eeeeee !important;
+}
+
+.btn {
+   justify-content: center;
+   align-items: center;
+   background: #d8e2f1;
+   border: 1px solid #228bc8;
+   box-sizing: border-box;
+   width: 100px;
+   height: 28px;
+   color: #228bc8;
+   font-size: 16px;
+   text-align: center;
+   text-decoration: none;
+   position: relative;
+   transition-duration: 0.2s;
+}
+.btn:hover {
+   background: #228bc8;
+   color: #fff;
+}
