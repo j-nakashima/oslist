@@ -30,7 +30,10 @@ export default {
       html: '',
       loading: false,
       message: '',
-      base_url: ''
+      base_url: '',
+      category_id: '',
+      item_id_lastname: '',
+      item_id_firstname: ''
     }
   },
   watch:{
@@ -86,7 +89,7 @@ export default {
          this.last_name = '';
          return;
       }
-      var params = {status: 'approved', category_id: 3, item_id_8 : this.first_name, item_id_7 : this.last_name};
+      var params = {status: 'approved', category_id: this.category_id, [this.item_id_lastname] : this.first_name, [this.item_id_firstname] : this.last_name};
       var qparam = new URLSearchParams(params);
       var requestOptions = {
          method: "GET",
@@ -108,6 +111,9 @@ export default {
   },
   created(){
     this.base_url = process.env.VUE_APP_BASE_URL;
+    this.category_id = process.env.VUE_APP_CATEGORY_ID;
+    this.item_id_lastname = 'item_id_' + process.env.VUE_APP_ITEM_ID_LASTNAME;
+    this.item_id_firstname = 'item_id_' + process.env.VUE_APP_ITEM_ID_FIRSTNAME;
     this.checkToken(false);
     this.initValue();
     this.token = sessionStorage.getItem('formifytoken');
