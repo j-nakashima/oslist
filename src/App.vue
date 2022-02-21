@@ -89,7 +89,7 @@ export default {
          this.last_name = '';
          return;
       }
-      var params = {status: 'approved', category_id: this.category_id, [this.item_id_lastname] : this.first_name, [this.item_id_firstname] : this.last_name};
+      var params = {status: 'approved', category_id: this.category_id, [this.item_id_firstname] : this.first_name, [this.item_id_lastname] : this.last_name};
       var qparam = new URLSearchParams(params);
       var requestOptions = {
          method: "GET",
