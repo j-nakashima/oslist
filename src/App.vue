@@ -76,6 +76,9 @@ export default {
       this.checkToken(true);
       this.fullname.trim();
       var _name = this.fullname.split('　');
+      if(_name.length < 2) {
+         _name = this.fullname.split(' ');
+      }
       this.last_name = _name[0];
       _name.shift();
       this.first_name = _name.join('　');
