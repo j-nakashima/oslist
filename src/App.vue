@@ -57,14 +57,6 @@ export default {
         sessionStorage.setItem('formifytoken', this.token);
       }
     },
-    fullname: function(newValue){
-      if ( newValue.length > 1024 ){
-         this.fullname = newValue.slice(0,1024);
-         alert('検索する人数を減らしてください（最大100名程度）');
-      }else{
-         this.fullname = newValue;
-      }
-    }
   },
   methods:{
     initValue: function(){
@@ -82,6 +74,9 @@ export default {
         alert("セッションが終了しました");
       }
       this.getToken();
+    },
+    errMessOverNum: function(){
+      alert('検索する人数を減らしてください（最大100名程度）');
     },
     getToken: function(){
       var username = process.env.VUE_APP_TOKEN_ID;
@@ -120,6 +115,10 @@ export default {
       var fullnames = this.fullname.split('\n');
       var firstnames = new Array();
       var lastnames = new Array();
+      if ( fullnames.length > 100 ){
+         this.errMessOverNum();
+         return false;
+      }
       for (let i=0; i < fullnames.length; i++){
         var fullname_ = fullnames[i].trim();
         if (fullname_.length < 1){
